@@ -26,7 +26,7 @@ st.table(df)
 
 #Adding a color style  from pandas
 
-#st.dataframe(df.style.highlight_max(axis=0))
+st.dataframe(df.style.highlight_max(axis=0))
 
 
 
