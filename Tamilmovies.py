@@ -15,7 +15,7 @@ df =pd.read_csv("Top100.csv")
 
 #method 1
 
-#st.dataframe(df)
+st.dataframe(df)
 
 
 #method 2 static table
@@ -25,7 +25,7 @@ df =pd.read_csv("Top100.csv")
 
 #Adding a color style  from pandas
 
-st.dataframe(df.style.highlight_max(axis=0))
+#st.dataframe(df.style.highlight_max(axis=0))
 
 
 
