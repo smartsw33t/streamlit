@@ -1,6 +1,6 @@
 #Basics and fundamentals
 
-st.header("Top 10 Tamil Movies")
+
 #Core package
 import streamlit as st
 
@@ -10,6 +10,7 @@ import streamlit as st
 import pandas as pd 
 
 #display data
+st.header("Top 10 Tamil Movies")
 
 df =pd.read_csv("Top100.csv")
 
