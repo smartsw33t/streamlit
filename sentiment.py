@@ -10,24 +10,6 @@ def convert_to_df(sentiment):
     sentiment_df = pd.DataFrame(sentiment_dict.items(), columns=['metric', 'value'])
 
     return sentiment_df
-def analyze_token_sentiment(docx):
-    analyzer = SentimentIntensityAnalyzer()
-    pos_list = []
-    neg_list = []
-    neu_list = []
-    for i in docx.split():
-        res = analyzer.polarity_scores(i)['compound']
-        if res > 0.1:
-            pos_list.append(i)
-            pos_list.append(res)
-        elif res < -0.1:
-             neg_list.append(i)
-             neu_list.append(res)
-        else:
-            neu_list.append(i)
-    result = {'positive': pos_list, 'negative': neg_list, 'neutral': neu_list }
-    return result
-
 
 def main():
     st.title("Sentiment Analysis App")
