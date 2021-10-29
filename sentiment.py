@@ -62,8 +62,6 @@ def main():
                 x='metric',
                 y='value', color='metric' )
             st.altair_chart(c,use_container_width=True)
-      
-
     else:
         st.subheader("About")
 if __name__ == '__main__':
