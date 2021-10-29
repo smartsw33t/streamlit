@@ -1,8 +1,7 @@
 import streamlit as st
-from textblob import TextBlob
 import pandas as pd
 import altair as alt
-from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
+
 
 #Functions
 
@@ -41,7 +40,7 @@ def main():
             raw_text = st.text_area("Enter Text Here")
             submit_button = st.form_submit_button(label='Analyse')
         #Layout
-        col1, col2 = st.columns(2)
+        col1 = st.columns(1)
         with col1:
             st.info("Results")
             sentiment = TextBlob(raw_text).sentiment
@@ -63,10 +62,7 @@ def main():
                 x='metric',
                 y='value', color='metric' )
             st.altair_chart(c,use_container_width=True)
-        with col2:
-            st.info("Token Sentiment")
-            token_sentiments = analyze_token_sentiment(raw_text)
-            st.write(token_sentiments)
+      
 
     else:
         st.subheader("About")
